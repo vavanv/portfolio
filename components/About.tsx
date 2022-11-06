@@ -22,7 +22,7 @@ export default function About({}: Props) {
           opacity: 1,
           x: 0,
         }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         src="https://scontent.fyyz1-2.fna.fbcdn.net/v/t1.18169-9/14440825_970910346368193_1319467220109149433_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=RaqhdgfCozEAX_tZxvl&_nc_ht=scontent.fyyz1-2.fna&oh=00_AT8VYVL9uQvltU8iL69926BnKdYVxi_lE1CFvY4wVY24_A&oe=636F5D9B"
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
