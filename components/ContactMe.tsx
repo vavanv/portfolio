@@ -1,6 +1,7 @@
 import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { PageInfo } from '../typings';
 
 type Inputs = {
   name: string;
@@ -9,12 +10,14 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function ContactMe({}: Props) {
+function ContactMe({ pageInfo }: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = formData => {
-    window.location.href = `mailto:vladimir.vorobiev@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`;
+    window.location.href = `mailto:${pageInfo?.email}?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`;
   };
   return (
     <div className="h-screen flex relative overflow-hidden flex-col text-center md:flex-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
@@ -27,17 +30,17 @@ function ContactMe({}: Props) {
         <div className="space-y-10">
           <div className="flex space-x-5  justify-center">
             <PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+1 (647)-290-9593</p>
+            <p className="text-2xl">{pageInfo?.phoneNumber}</p>
           </div>
 
           <div className="flex  space-x-5 justify-center">
             <EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">vladimir.vorobiev@gmail.com</p>
+            <p className="text-2xl">{pageInfo?.email}</p>
           </div>
 
           <div className="flex  space-x-5 justify-center">
             <MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Richmond Hill Ontario Canada</p>
+            <p className="text-2xl">{pageInfo?.address}</p>
           </div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">

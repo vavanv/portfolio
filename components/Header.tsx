@@ -27,7 +27,6 @@ export default function Header({ socials }: Props) {
         }}
         className="flex flex-row items-center"
       >
-        {/*Social icons*/}
         {socials.map(social => (
           <SocialIcon key={social._id} url={social.url} fgColor="gray" bgColor="transparent" />
         ))}
