@@ -42,10 +42,15 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
         <p className="uppercase py-5 text-gray-300">
-          {new Date(experience.dateStarted).toDateString()} -{' '}
+          {(new Date(experience.dateStarted).getMonth() + 1).toString() +
+            '/' +
+            new Date(experience.dateStarted).getFullYear().toString()}
+          -{' '}
           {experience.isCurrentlyWorkingHere
             ? 'Present'
-            : new Date(experience.dateEnded).toDateString()}
+            : (new Date(experience.dateEnded).getMonth() + 1).toString() +
+              '/' +
+              new Date(experience.dateEnded).getFullYear().toString()}
         </p>
         <ul
           className="list-disc space-y-4 ml-5 text-lg scroll h-80 overflow-y-scroll pr-5
