@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import About from '../components/About';
 import Header from '../components/Header';
@@ -56,10 +57,13 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <img
-              className="h-8 w-8 rounded-full filter cursor-pointer"
+            <Image
+              width={30}
+              height={30}
+              className="rounded-full filter cursor-pointer"
               src={urlFor(pageInfo?.heroImage).url()}
               alt=""
+              title="Home"
             />
           </div>
         </footer>
