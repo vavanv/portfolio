@@ -35,7 +35,7 @@ function Projects({ projects }: Props) {
               <h4 className="text-4xl font-semibold text-center">{project?.title}</h4>
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies?.map(technology => (
-                  <img
+                  <motion.img
                     className="h-7 w-7 cursor-pointer"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
