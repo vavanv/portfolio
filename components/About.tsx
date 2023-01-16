@@ -37,6 +37,14 @@ export default function About({ pageInfo }: Props) {
         <ul className="text-base">
           <p className="text-base">{pageInfo?.backgroundInformation}</p>
         </ul>
+        <ul
+          className="list-disc space-y-4 ml-5 text-lg scroll h-80 overflow-y-scroll pr-5
+        scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80 "
+        >
+          {pageInfo?.points?.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
       </div>
     </motion.div>
   );

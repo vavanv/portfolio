@@ -26,6 +26,7 @@ export interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
+  points: string[];
 }
 
 export interface Social extends SanityBody {
