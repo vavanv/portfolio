@@ -55,11 +55,5 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: { type: 'social' } }],
     },
-    {
-      name: 'points',
-      title: 'Points',
-      type: 'array',
-      of: [{ type: 'string' }],
-    },
   ],
 };
