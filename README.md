@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 https://vladv.netlify.app
 
-https://potfolio-demo.sanity.studio/
+https://potfolio-demo.sanity.studio/ GitHub Account
 
 DOES NOT WORK
 https://portfolio-vavanv.vercel.app/
@@ -16,6 +16,7 @@ npm run dev
 # or
 yarn dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
